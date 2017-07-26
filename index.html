@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>typer</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" href="app.css">
+</head>
+
+<body>
+<div id="fo">
+	<form name="fo">
+		<input id="t3" type="text" readonly name="t3"><br/>
+		<input id="t1" type="text" readonly name="t1" value="Type fast !!"><br/> 	
+		<input id="t2" type="text" name="t2"><br/>
+		<input id="t4" type="text" readonly name="t4"><br/>
+		<input id="b1" type="button" onClick="start(),wait()" name="b1" value="Begin!">
+	</form>
+</div>
+	<script>
+		s="texte sans ponctuation expédition sur la banquise je sors le nez par la fente il fait nuit encore mais vers une faible lueur monte déjà il faut se lever repartir pousser tirer le traîneau encore toujours il ne neige pas il  pas neigé mais les nuages sont bas et noirs kristian debout sur son traîneau sort de la tente comme on sort d'un pantalon avancer marcher pousser tirer tirer pousser marcher avancer toujours toujours s'arrêter jamais se reposer jamais pourquoi enfin les oeufs craquèrent l'un après l'autre on entendait clac clac tous les jaunes d'oeufs étaient devenus vivants et sortaient la tête coin coin disait la cane et les canetons s'agitaient tant qu'ils pouvaient et regardaient de tous les côtés sous les feuilles vertes et la mère les laissait regarder autant qu'ils voulaient car le vert est bon pour les yeux comme le monde est grand disaient tous les petits et ils avaient en effet un beaucoup plus grand espace que lorsqu'ils étaient enfermés dans leurs oeufs croyez-vous que c'est là le monde entier disait la mère il s'étend loin de l'autre côté du jardin jusqu'au champ du prêtre mais je n'y ai jamais été vous êtes bien là tous au moins et elle se leva"; //random text to get words aka. laziness lol
+		arr=s.split(" ");		
+		x=1; //controls all the recursive functions pause/play
+		k=arr.length;
+		r=1; //controls the chrono recursive function
+		document.fo.t3.value=0;
+
+		function t1p()
+		{
+			r=1;
+			m=Math.floor(Math.random()*k);
+			document.fo.t1.value=arr[m];
+			tmp=arr[0];
+			arr[0]=arr[m];
+			arr[m]=tmp;
+			arr.shift();
+			k--;
+			document.fo.t2.value="";
+			a=0;
+		}
+
+		t=10; //the time of the exercice (can be changed later)
+		function chrono()
+		{
+			document.fo.t4.value=t+"s";
+			if(t>=0) t--;
+		    if(r==1) setTimeout("chrono()",1000);
+			if(t==-1) 
+				{
+					document.fo.t4.value="Time Out!"; 
+					endgame();
+					return;					
+				}
+		}
+
+		function score()
+		{
+			if((document.fo.t1.value===document.fo.t2.value) && (a==0))
+			{
+				document.fo.t3.value++;
+				a=1;
+				setTimeout("t1p()",0);
+			}
+			if(x==0) setTimeout("score()",0);
+		}
+
+		function tfocus()
+		{
+			document.fo.t2.focus();
+		}
+
+		n=1; //correct the case when button clicked more than once in the 2s Cooldown
+		function wait()
+		{
+			n=0;
+		}
+		function go()
+		{
+			n=1;
+		}
+
+		function start()
+		{	
+			if(n==1)
+			{
+				document.fo.t2.value="Get ready !";
+				document.fo.t2.readOnly=false;
+				if(x==1) setTimeout("go();t1p();score();chrono();tfocus()",2000);
+				reset();
+				x=0;
+			}
+		}
+
+		function endgame()
+		{
+			document.fo.t2.value="Your score : "+document.fo.t3.value;
+			document.fo.t2.readOnly=true;
+		}
+
+		function reset()
+		{
+			document.fo.b1.value="Reset!";
+			if(x==0) 
+			{
+				document.fo.t3.value=0;
+				t=10;
+				x=1;
+				start();
+				r=0;
+			}
+		}
+		
+	</script>
+</body>
+</html>
