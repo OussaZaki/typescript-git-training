@@ -1,0 +1,14 @@
+#but{
+	margin:50px;
+	margin-left: 80px;
+	font-size: 24pt;
+	cursor: pointer;
+	padding: 20px;
+	width: 160px;
+	border-radius: 5px;
+	outline: none;
+}
+#text{
+	margin-bottom: 0;
+	font-family: helvetica;
+}
