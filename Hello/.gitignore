@@ -1,4 +1,4 @@
 #ignore log files
 *.log
-#ignore ts files
-*.ts
+#ignore js files
+*.js
