@@ -22,8 +22,7 @@ return tmp;
 }
 
 function generate_password() {
-       var pass: String;
-       pass="";
+       var pass: string="";
        let numbers: number[] = [1,2,3,4,5,6,7,8,9,0];
        let special_chars: string[]=['#','.','!','?',';',',','&','[',']'];
        let alphabet: string[]= generate_alphabet();
@@ -51,4 +50,7 @@ function generate_password() {
        
   return pass;  
   }
-
+function gen() {
+  var p=generate_password();
+  document.getElementById("pass").innerHTML=p;
+}

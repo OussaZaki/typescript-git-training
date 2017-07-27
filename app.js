@@ -12,8 +12,7 @@ function generate_alphabet() {
     return tmp;
 }
 function generate_password() {
-    var pass;
-    pass = "";
+    var pass = "";
     var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0];
     var special_chars = ['#', '.', '!', '?', ';', ',', '&', '[', ']'];
     var alphabet = generate_alphabet();
@@ -35,4 +34,8 @@ function generate_password() {
         }
     }
     return pass;
+}
+function gen() {
+    var p = generate_password();
+    document.getElementById("pass").innerHTML = p;
 }
