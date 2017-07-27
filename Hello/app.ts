@@ -1,3 +1,3 @@
 function showHelloMessage() {
- 	$("#text").html("Hello back to you human!");
+ 	document.getElementById("#text").innerHTML="Hello back to you human!";
 }
