@@ -3,7 +3,7 @@
 
 function randomInt(start : number , end : number){
 
-    return start + Math.floor( Math.random() * ( end - start ) );
+	return start + Math.floor( Math.random() * ( end - start ) );
 
 }
 
@@ -12,19 +12,19 @@ function randomInt(start : number , end : number){
 
 function generate_password() {
 
-    let pass : string = "" ;
-    const numbers = '0123456789';
+	let pass : string = "" ;
+	const numbers = '0123456789';
 	const alphabet = 'abcdefghijklmnopqrstwxyzABCDEFGHIJKLMNOPQRSTWXYZ';
 	const specials = '#.!?;,&[]';
 
 	const selection = numbers + alphabet + specials;
 
-    for ( var i = 0 ; i < 16 ; i++ ) {
+	for ( var i = 0 ; i < 16 ; i++ ) {
 
 
-        const random_selection_int = randomInt( 0 , selection.length ) ;
-        const random_selection = selection[random_selection_int] ;
-        pass += random_selection  ;
+		const random_selection_int = randomInt( 0 , selection.length ) ;
+		const random_selection = selection[random_selection_int] ;
+		pass += random_selection  ;
         
       
         
@@ -39,7 +39,7 @@ return pass ;
 
 function change_innerhtml () {
 
-  var pw = generate_password() ;
-  document.getElementById( "pass" ).innerHTML = pw ;
+	var pw = generate_password() ;
+	document.getElementById( "pass" ).innerHTML = pw ;
 
 }
