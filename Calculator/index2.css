@@ -1,0 +1,47 @@
+
+*{
+font-family: verdana;
+}
+#result{
+  margin-left: 30px;
+}
+
+input{
+margin-bottom: 5px;
+border: solid gray 1px;
+padding: 4px;
+font-size: 11px;
+border-radius: 4px;
+
+}
+#nb2{
+text-align:right;
+}
+
+input{
+width: 70px;
+}
+
+
+#central{
+width: 300px;
+margin: auto;
+margin-top: 200px;
+}
+
+
+
+
+input:focus,option:focus{
+background-color: rgba(248,205,235,0.5);
+}
+input[type="submit"]:focus{
+background-color:white;
+}
+
+legend{
+font-family: 'Tangerine', verdana; /*'Tangerine' is imported from "googlefonts"*/
+font-size:1em;
+margin-left:20px;
+color: rgb(128,64,64);
+}
