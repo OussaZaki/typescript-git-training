@@ -1,90 +1,90 @@
 *{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
 }
 #video{
-    display: none;
+	display: none;
 }
 html,body{
-    height: 100%;
+	height: 100%;
 }
 body{
-    background: #7b3080;
-    background-size: cover;
+	background: #7b3080;
+	background-size: cover;
 }
 #bg{
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 50%;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 50%;
 }
 #message{
-    width: 50%;
-    height: 100%;
-    float: right;
-    position: relative;
+	width: 50%;
+	height: 100%;
+	float: right;
+	position: relative;
 }
 #message p{
-    width: 60%;
-    float: right;
-    color: #FFF;
-    font-family: verdana;
-    font-weight: bold;
-    margin-right: 20px;
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
-    left: 25%;
+	width: 60%;
+	float: right;
+	color: #FFF;
+	font-family: verdana;
+	font-weight: bold;
+	margin-right: 20px;
+	position: absolute;
+	transform: translateY(-50%);
+	top: 50%;
+	left: 25%;
 }
 #message span{
-    font-weight: normal;
+	font-weight: normal;
 }
 .link.bg-link{
-    width: 16%;
+	width: 16%;
 }
 .link.bg-link::after{
-    background: #7b3080;  
-    box-shadow: 0px 0px 0px 5px #FFF;
+	background: #7b3080;  
+	box-shadow: 0px 0px 0px 5px #FFF;
 }
 .link {
-    width: 15%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    z-index: 99;
+	width: 15%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 99;
 }
 .link a{
-    text-decoration: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    color: #7b3080;
-    font-size: 18px;
+	text-decoration: none;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color: #7b3080;
+	font-size: 18px;
 }
 .link:after {
-    content: "";
-    display: block;
-    width: 100%;
-    height:0;
-    padding-bottom: 100%;
-    background: #FFF; 
-    -moz-border-radius: 50%; 
-    -webkit-border-radius: 50%; 
-    border-radius: 50%;
-    cursor: pointer;
-    transition: all 0.3s;
+	content: "";
+	display: block;
+	width: 100%;
+	height:0;
+	padding-bottom: 100%;
+	background: #FFF; 
+	-moz-border-radius: 50%; 
+	-webkit-border-radius: 50%; 
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.3s;
 }
 .link div {
-    float:left;
-    width:100%;
-    padding-top:50%;
-    margin-top:-10px;
-    text-align:center;
-    cursor: pointer;
+	float:left;
+	width:100%;
+	padding-top:50%;
+	margin-top:-10px;
+	text-align:center;
+	cursor: pointer;
 }
 .played::after{
-    background: #d05ad8;
+	background: #d05ad8;
 }
 .played a{
-    color: #FFF;
+	color: #FFF;
 }
