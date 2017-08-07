@@ -1,28 +1,55 @@
+class Create
+{
+        htmlelent:HTMLElement;
+        vOf:string;
+        id:string;
+        constructor (vOf:string ,id: string ){
+          this.vOf = vOf;
+          this.id=  id;
+          }
+          createB()
+          {
+                var element = document.createElement("input");
+                element.setAttribute("value",this.vOf);
+                element.setAttribute("id",this.id);
+                element.setAttribute("type","button");
+                if ((parseFloat(this.id)%3 == 0)||(this.vOf == "*")) {
 
-function SUM(){
-var number1:number=parseFloat((<HTMLInputElement>document.getElementById("number1")).value);
-var number2:number=parseFloat((<HTMLInputElement>document.getElementById("number2")).value);
-var s :number=number1+number2;
-  (<HTMLInputElement> document.getElementById("result")).value=s.toFixed();
-}
-function SUBSTRACTION(){
-var number1:number=parseFloat((<HTMLInputElement>document.getElementById("number1")).value);
-var number2:number=parseFloat((<HTMLInputElement>document.getElementById("number2")).value);
-var s :number=number1-number2;
-  (<HTMLInputElement> document.getElementById("result")).value=s.toFixed();
-}
-function MULTIPLICATION(){
-var number1:number=parseFloat((<HTMLInputElement>document.getElementById("number1")).value);
-var number2:number=parseFloat((<HTMLInputElement>document.getElementById("number2")).value);
-var s :number=number1*number2;
-  (<HTMLInputElement> document.getElementById("result")).value=s.toFixed();
-}
-function DIVISION(){
-var number1:number=parseFloat((<HTMLInputElement>document.getElementById("number1")).value);
-var number2:number=parseFloat((<HTMLInputElement>document.getElementById("number2")).value);
-if (number2!=0)
-{var s :number=number1/number2;
-  (<HTMLInputElement> document.getElementById("result")).value=s.toFixed();
-}
-else (<HTMLInputElement> document.getElementById("result")).value="error";
-}
+                    document.getElementById("nbrButton").appendChild(element);
+                    document.getElementById("nbrButton").appendChild(document.createElement("br"));
+                }
+                else{
+                document.getElementById("nbrButton").appendChild(element);
+                }
+                element.addEventListener("click", function(){
+                  var type:string=element.getAttribute("id");
+                  switch(type){
+                    case "=": {
+                            try{(<HTMLInputElement>document.getElementById("screen")).value = eval((<HTMLInputElement>document.getElementById("screen")).value).toFixed();
+                            }catch(e){
+                            alert("operation error");
+                            }
+                            break;
+                    }
+                    case "c":{
+                            (<HTMLInputElement>document.getElementById("screen")).value ='';
+                            break;
+                            }
+                    default : {
+                            (<HTMLInputElement>document.getElementById("screen")).value += type;
+                            break;
+                            }}});
+          }
+  }
+      window.onload = () =>
+      {
+          for (var i=1;i<10;i++){
+              var but = new Create(i.toString(),i.toString());
+              but.createB();
+          }
+          var symbole: string[] = ["+", "-", "*","/","c","="];
+
+          for (var j=0;j<symbole.length;j++){
+            new Create(symbole[j],symbole[j]).createB();
+          }
+      };
