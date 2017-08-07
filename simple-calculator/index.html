@@ -1,58 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>
-		My Calculator
-	</title>
-	<style type="text/css">
-		body
-		{
-			background-color:#F5DEB3;
-		}
-		form
-		{
-			
-			
-			margin-top: 100px;
-			margin-left: 1000px;
-			
-		}
-		.pi
-		{
-			height:60px;
-			text-align: center;
-			background-color: #FFF8DC;
-			border-style: none;
-			
-		}
-		.yi
-		{
-			border-radius: 25px;
-			background-color: #FFFFE0;
-			
-		}
-		div{
-			font-family:Courier New;
-			font-size: 30pt;
-
-		}
-	</style>
+	<title>My Calculator</title>
+	<link rel="stylesheet" type="text/css" href="mycalculator.css">	
+	<script src="mycalculator.js"></script>
 </head>
-<script src="mycalculator.js"></script>
-<body>
-<div><br> 
- 
-  TRY MY CALCULATOR HUMAN !
-  <br>IT IS FASTER THAN THE FASTEST OF ALL OF YOU .<div>
-	<form name="fo">
-		<input type="text" name="number1" id="1" class="pi">     
-		<input type="text" name="number2" id="2" class="pi"><br>
-		<input type="button" name="pushbutton1" value="+" onclick="calculator(0)" class="yi">
-		<input type="button" name="pushbutton2" value="-" onclick="calculator(1)" class="yi">
-		<input type="button" name="pushbutton3" value="*" onclick="calculator(2)" class="yi">
-		<input type="button" name="pushbutton4" value="/" onclick="calculator(3)" class="yi"><br>
-		<input type="text" id="result" class="pi" readonly>
 
-	</form>
+<body>
+	<div><h3>TRY MY CALCULATOR HUMAN !IT IS FASTER THAN THE FASTEST OF ALL OF YOU.</h3></div>
+	<div id="divi"><input type="text" name="number1" id="1" class="pi">     
+	<input type="text" name="number2" id="2" class="pi"><br>
+	<input type="button" name="pushbutton1" value="+" onclick="calculator(0)" class="yi">
+	<input type="button" name="pushbutton2" value="-" onclick="calculator(1)" class="yi">
+	<input type="button" name="pushbutton3" value="*" onclick="calculator(2)" class="yi">
+	<input type="button" name="pushbutton4" value="/" onclick="calculator(3)" class="yi"><br>
+	<input type="text" id="result" class="pi" readonly></div>
 </body>
 </html>
