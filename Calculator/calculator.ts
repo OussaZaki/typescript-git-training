@@ -13,12 +13,11 @@ class Create
                 element.setAttribute("id",this.id);
                 element.setAttribute("type","button");
                 if ((parseFloat(this.id)%3 == 0)||(this.valueOf == "*")) {
-
-                    document.getElementById("nbrButton").appendChild(element);
-                    document.getElementById("nbrButton").appendChild(document.createElement("br"));
+                    document.getElementById("operation-buttons").appendChild(element);
+                    document.getElementById("operation-buttons").appendChild(document.createElement("br"));
                 }
                 else{
-                document.getElementById("nbrButton").appendChild(element);
+                    document.getElementById("operation-buttons").appendChild(element);
                 }
                 element.addEventListener("click", function(){
                   var type:string=element.getAttribute("id");
@@ -40,7 +39,7 @@ class Create
                             }}});
           }
   }
-      window.onload = () =>
+  window.onload = () =>
       {
           for (var i=1;i<10;i++){
               var button = new Create(i.toString(),i.toString());
