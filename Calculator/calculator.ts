@@ -1,19 +1,18 @@
 class Create
 {
-        htmlelent:HTMLElement;
-        vOf:string;
-        id:string;
-        constructor (vOf:string ,id: string ){
-          this.vOf = vOf;
+        valueOf : string;
+        id : string;
+        constructor (valueOf:string ,id: string ){
+          this.valueOf = valueOf;
           this.id=  id;
           }
-          createB()
+          createButton()
           {
                 var element = document.createElement("input");
-                element.setAttribute("value",this.vOf);
+                element.setAttribute("value",this.valueOf);
                 element.setAttribute("id",this.id);
                 element.setAttribute("type","button");
-                if ((parseFloat(this.id)%3 == 0)||(this.vOf == "*")) {
+                if ((parseFloat(this.id)%3 == 0)||(this.valueOf == "*")) {
 
                     document.getElementById("nbrButton").appendChild(element);
                     document.getElementById("nbrButton").appendChild(document.createElement("br"));
@@ -44,12 +43,12 @@ class Create
       window.onload = () =>
       {
           for (var i=1;i<10;i++){
-              var but = new Create(i.toString(),i.toString());
-              but.createB();
+              var button = new Create(i.toString(),i.toString());
+              button.createButton();
           }
           var symbole: string[] = ["+", "-", "*","/","c","="];
 
           for (var j=0;j<symbole.length;j++){
-            new Create(symbole[j],symbole[j]).createB();
+            new Create(symbole[j],symbole[j]).createButton();
           }
       };
