@@ -1,4 +1,0 @@
-#ignore log files
-*.log
-#ignore js files
-*.js
