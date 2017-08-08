@@ -1,26 +1,22 @@
-	body{
-			background-color:#F5DEB3;
+	body {
+		background-color:#F5DEB3;
 	}
-	#divi{
-			margin-top: 100px;
-			margin-left: 1000px;
-			
+	#divi {
+		margin-top: 100px;
+		margin-left: 1000px;	
 	}
-	.pi{
-			height:60px;
-			text-align: center;
-			background-color: #FFF8DC;
-			border-style: none;
-			
+	.pi {
+		height:60px;
+		text-align: center;
+		background-color: #FFF8DC;
+		border-style: none;	
 	}
-	.yi{
-			border-radius: 25px;
-			background-color: #FFFFE0;
-			
+	.yi {
+		border-radius: 25px;
+		background-color: #FFFFE0;	
 	}
-	div{
-				font-family:Courier New;
-				font-size: 30pt;
-				color:#FF7F50;
-
+	div {
+		font-family:Courier New;
+		font-size: 30pt;
+		color:#FF7F50;
 	}
