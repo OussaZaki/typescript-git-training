@@ -1,0 +1,27 @@
+*{
+	font-family : arial, verdana, sans-serif;
+}
+body{
+	margin : 0;
+	background : linear-gradient(to bottom , #88F , #EEF);
+	background-size : cover;
+	background-repeat : no-repeat;
+	font-size : 24pt;
+}
+header{
+	text-align : center;
+	font-size : 42pt;
+	background-color : #66F;
+	padding : 30px;
+	border-radius : 10px;
+}
+input[type="number"]{
+	width : 60px;
+	height : 60px;
+	border-radius : 5px;
+	font-size : 18pt;
+}
+div{
+	text-align : center;
+	padding : 230px;
+}
