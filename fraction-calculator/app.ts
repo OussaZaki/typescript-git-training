@@ -84,30 +84,29 @@ function calcul(){
 	else{
 		let operator = (<HTMLInputElement>document.getElementById("operation")).value;
 		switch(operator){
-			case "+":{
-				result = addition(a,b);
-				(<HTMLInputElement>document.getElementById("resultNumerator")).value = result.numerator.toString();
-				(<HTMLInputElement>document.getElementById("resultDenominator")).value = result.denominator.toString();
-				break;
-			}
-			case "-":{
-				result = substraction(a,b);
-				(<HTMLInputElement>document.getElementById("resultNumerator")).value = result.numerator.toString();
-				(<HTMLInputElement>document.getElementById("resultDenominator")).value = result.denominator.toString();
-				break;
-			}
-			case "*":{
-				result = multiplication(a,b);
-				(<HTMLInputElement>document.getElementById("resultNumerator")).value = result.numerator.toString();
-				(<HTMLInputElement>document.getElementById("resultDenominator")).value = result.denominator.toString();
-				break;
-			}
-			case "/":{
-				result = division(a,b);
-				(<HTMLInputElement>document.getElementById("resultNumerator")).value = result.numerator.toString();
-				(<HTMLInputElement>document.getElementById("resultDenominator")).value = result.denominator.toString();
-				break;
-			}
-		}
+			case "+": {
+                		result = addition(a, b);
+               			 break;
+            		}
+            		case "-": {
+                		result = substraction(a, b);
+                		break;
+            		}
+            		case "*": {
+                		result = multiplication(a, b);
+                		break;
+            		}
+            		case "/": {
+                		try {
+                    			result = division(a, b);
+                		}
+                		catch (e) {
+                    			alert(e.message); //conversion to Error type
+                		}
+                		break;
+            		}
+        	}
+        	document.getElementById("resultNumerator").value = result.numerator.toString();
+        	document.getElementById("resultDenominator").value = result.denominator.toString();
 	}
 }
