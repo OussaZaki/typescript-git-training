@@ -101,7 +101,7 @@ function calcul(){
                     			result = division(a, b);
                 		}
                 		catch (e) {
-                    			alert(e.message); //conversion to Error type
+                    			alert((<Error>e).message); //conversion to Error type
                 		}
                 		break;
             		}
