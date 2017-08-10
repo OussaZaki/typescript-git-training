@@ -106,7 +106,7 @@ function calcul(){
                 		break;
             		}
         	}
-        	document.getElementById("resultNumerator").value = result.numerator.toString();
-        	document.getElementById("resultDenominator").value = result.denominator.toString();
+        	(<HTMLInputElement>document.getElementById("resultNumerator")).value = result.numerator.toString();
+		(<HTMLInputElement>document.getElementById("resultDenominator")).value = result.denominator.toString();
 	}
 }
